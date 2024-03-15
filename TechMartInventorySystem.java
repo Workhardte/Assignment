@@ -72,7 +72,7 @@ class Product extends Item {
         System.out.println("Product ID: " + getProductId());
         System.out.println("Product Name: " + getProductName());
         System.out.println("Price: $" + getPrice());
-        System.out.println("Quantity in Stock: " + getQuantityInStock());
+        System.out.println("Quantity in Stock is: " + getQuantityInStock());
     }
 }
 
@@ -89,7 +89,7 @@ class Inventory {
     public void displayInventory() {
         for (Product product : productList) {
             product.displayDetails();
-            System.out.println("Total Inventory Value: $" + product.calculateInventoryValue());
+            System.out.println("The Total Inventory Value is: $" + product.calculateInventoryValue());
             System.out.println();
         }
     }
@@ -98,8 +98,8 @@ class Inventory {
 public class TechMartInventorySystem {
     public static void main(String[] args) {
         
-        Product electronicProduct = new Product("television", 1200.0, 101, 50);
-        Product clothingProduct = new Product("skirt", 50.0, 205, 200);
+        Product electronicProduct = new Product("laptop", 1200.0, 101, 50);
+        Product clothingProduct = new Product("trouser", 50.0, 205, 200);
 
        
         Inventory techMartInventory = new Inventory();
